@@ -1,0 +1,120 @@
+html {
+    padding:40px;
+    background-color: #999;
+}
+#header{
+    color:#666;
+
+}
+.main {
+    width:auto;
+    height:720px;
+    background-color: #333;
+
+}
+.mainBox {
+    width:30%;
+    height:600px;
+    background-color: #0B81C8;
+    margin-left:5%;
+    margin-top: 5%;
+    color:white;
+    padding:10px;
+    position: relative;
+    float:left;
+    border:5px white solid;
+}
+.mainGraph {
+    max-width:auto;
+    background-repeat: no-repeat;
+}
+/*when screen is >1095px collapses wrong */
+#grid {
+  width: 600px;
+  display:inline-block;
+  float:right;
+  margin-top: 5%;
+  margin-right: 5%;
+  padding:5px;
+  /*overflow-y: scroll;*/
+  height: 600px;
+}
+
+.grid-element {
+  width: 150px;
+  height: 150px;
+  float: left;
+  background-color: #888;
+  border: 5px #333 solid;
+  padding:10px
+}
+.grid-element:hover{
+  border-color:#0B81C8;
+}
+#addBtn{
+    text-align: center;
+}
+#addBtn button{
+  background-color: #0B81C8;
+
+}
+
+#APPLE {
+  background-size: cover;
+  background-image: url("http://webinteresante.com/wp-content/uploads/2008/08/apple-logo-150x150.jpg");
+}
+#GE {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.gannett-cdn.com/-mm-/de249bf55dfd5b1480a0dd7e45cdf64510bf0835/c=0-48-382-335&r=x408&c=540x405/local/-/media/USATODAY/USATODAY/2014/08/15/1408136545000-GE-logo-round.jpg");
+}
+#TESLA {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.tkostocks.com/tko/wp-content/uploads/2015/05/Tesla-Motors-Logo-300x336.jpg");
+}
+#ATT {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://cache2.bestmvno.com/wp-content/uploads/2016/03/ATT-Wireless-Logo.jpg");
+}
+#IBM {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.mouseoc.co.il/wp-content/uploads/2015/07/IBM-Intel-logo-150x150.jpg");
+}
+#MICROSOFT {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://fullhdpictures.com/wp-content/uploads/2016/01/Microsoft-Logo-HD-150x150.jpg");
+}
+#EXXON {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://logonoid.com/images/thumbs/exxon-logo.png");
+}
+#GOPRO {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.yes.finestcityimprov.com/wp-content/uploads/sites/2/2015/04/gopro-logo-150x150.jpg");
+}
+#AMAZON {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.androidpolice.com/wp-content/uploads/2011/10/amazon-logo-150x150_thumb.jpg");
+}
+#BLIZZARD {
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-image: url("http://www.dtmcproduction.com/wp-content/uploads/2014/10/logo_activision-150x150.jpg");
+}
+#CHIPOTLE {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.jeremyperson.com/wp-content/uploads/2009/10/Chipotle-logo.jpg");
+}
+#FORD {
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://www.findthatlogo.com/wp-content/uploads/2011/11/ford-logo.gif");
+}

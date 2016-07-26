@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="Portfolio">
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="/app.js"></script>
+  </head>
+
+  <body ng-controller="Stocks as stocks" ng-submit="stocks.addStock()" >
+      <header>
+          <h1 id = "header">Portfolio</h1>
+
+      </header>
+<!-- main div contained all pieces of data -->
+        <div class="main">
+          <div class = "mainBox">
+<!-- the div containing the pre selected company  -->
+            <div class = "mainInfo">
+              <h3>{{ this.stockSymbol }}</h3>
+              <p>{{ this.stockName }}</p>
+            </div>
+<!-- details listed out that are provided by the api  -->
+            <div class ="mainDetail" ng-repeat="stocks in Stocks.stockSelected">
+              <ul>
+                <li>Name:{{ this.stockName }}</li>
+                <li>Symbol:{{ this.stockSymbol }}</li>
+                <li>Last Price:{{ this.lastPrice }}</li>
+                <li>Change:{{ this.priceChange }}</li>
+                <li>Change Percent:{{ this.currentChange }}</li>
+                <li>Change YTD:{{ this.changePercentYTD }}</li>
+              </ul>
+<!-- graph containing information provided by the api -->
+              <div class ="mainGraph">
+                <img src="http://www.stockmarket-coach.com/images/reading-stock-charts-candlestick-chart.jpg" class="img-responsive" alt="Responsive image" />
+              </div>
+            </div>
+          </div>
+<!-- containter that containes the grid of stocks available to select.can add or remove in this section -->
+          <div class = "stockSelectCont">
+            <div id="grid">
+              <div class="grid-element" id="APPLE" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="GE" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="TESLA" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="ATT" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="IBM" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="MICROSOFT" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="EXXON" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="GOPRO" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="AMAZON" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="BLIZZARD" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="CHIPOTLE" ng-click="stocks.selectStock()"></div>
+              <div class="grid-element" id="FORD" ng-click="stocks.selectStock()"></div>
+              <!-- <div class="grid-element" id ="addBtn"><form>
+              <input required class="form-control" type="text" placeholder="Look Up Stock" ng-model="stocks.stock">
+              <button>+</button>
+              </form></div> -->
+              <!-- <div class="grid-element" ng-repeat="stocks in stocks.list ">
+                <p>Stock: {{ stocks.stock}}</p>
+                <button type="button" ng-click="stocks.stockRemove()">Remove Stock</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+  </body>
+
+
+</html>
