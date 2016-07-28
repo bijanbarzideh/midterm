@@ -12,36 +12,48 @@
         <div class="main">
           <div class = "mainBox">
             <div class = "mainInfo">
-              <h5>Stock Symbol</h3>
-              <p>Stock Name</p>
+              <h5 id="headSymbol">Stock Symbol</h3>
+              <p id="headName">Stock Name</p>
             </div>
 
             <div class ="mainDetail" >
               <table class="table table-hover">
                <tr>
                  <td>Name:</td>
-                 <td id="CompanyNameCell"><{{name}}</td>
+                 <td id="CompanyNameCell">{{name}}</td>
                </tr>
                 <tr>
                  <td>Symbol:</td>
-                 <td id="CompanySymbolCell"><{{symbol}}</td>
+                 <td id="CompanySymbolCell">{{symbol}}</td>
                </tr>
                 <tr>
                  <td>Last Price:</td>
-                 <td id="LastPriceCell"><{{last price}}</td>
+                 <td id="LastPriceCell">{{last price}}</td>
                </tr>
                <tr>
                  <td>Change :</td>
-                 <td id="ChangeCell"><{{ change }}</td>
+                 <td id="ChangeCell">{{ change }}</td>
                </tr>
                <tr>
                  <td>Change Percent:</td>
-                 <td id="ChangePercentCell"><{{ change percent }}</td>
+                 <td id="ChangePercentCell">{{ change percent }}</td>
                </tr>
                 <tr>
-                 <td>Change YTD :</td>
-                 <td id="ChangeYTDCell"><{{ change YTD}}</td>
+                 <td>Change YTD:</td>
+                 <td id="ChangeYTDCell">{{ change YTD}}</td>
                </tr>
+               <tr>
+                <td>Open:</td>
+                <td id="OpenCell">{{ Open }}</td>
+              </tr>
+               <tr>
+                <td>High:</td>
+                <td id="HighCell">{{ change YTD}}</td>
+              </tr>
+             <tr>
+              <td>Low:</td>
+              <td id="LowCell">{{ Low }}</td>
+            </tr>
              </table>
 
 

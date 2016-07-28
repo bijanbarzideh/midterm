@@ -27,6 +27,7 @@ html {
 .mainGraph {
     max-width:auto;
     background-repeat: no-repeat;
+    display: none;
 }
 /*when screen is >1095px collapses wrong */
 #grid {
