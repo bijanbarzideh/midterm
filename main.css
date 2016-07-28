@@ -15,14 +15,14 @@ html {
 .mainBox {
     width:30%;
     height:600px;
-    background-color: #0B81C8;
+    background-color:white;
     margin-left:5%;
     margin-top: 5%;
-    color:white;
+    color:grey;
     padding:10px;
     position: relative;
     float:left;
-    border:5px white solid;
+    border:5px #0B81C8 solid;
 }
 .mainGraph {
     max-width:auto;
