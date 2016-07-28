@@ -6,6 +6,36 @@ html {
     color:#666;
 
 }
+
+@media (max-width: 1095px) {
+
+  html {
+      padding:40px;
+      background-color: #333;
+  }
+  .mainBox{
+      width:auto;
+      height:430px;
+      border:5px #0B81C8 solid;
+    }
+    #grid {
+    padding-top: 20px;
+    overflow-x: scroll;
+    height: 220px;
+    border:5px #0B81C8 solid;
+    }
+    .grid-element {
+    box-shadow: 1px 1px 10px #999;
+    max-height: 1000px;
+    cursor: pointer;
+    display:inline-block;
+    height: 150px;
+    background-size: stretch;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+}
+@media screen and (min-width:1095px) {
 .main {
     width:auto;
     height:720px;
@@ -14,6 +44,7 @@ html {
 }
 .mainBox {
     width:30%;
+    display: inline-block;
     height:600px;
     background-color:white;
     margin-left:5%;
@@ -21,26 +52,19 @@ html {
     color:grey;
     padding:10px;
     position: relative;
-    float:left;
+
     border:5px #0B81C8 solid;
 }
-.mainGraph {
-    max-width:auto;
-    background-repeat: no-repeat;
-    display: none;
-}
+
 /*when screen is >1095px collapses wrong */
 #grid {
   width: 600px;
-  display:inline-block;
-  float:right;
-  margin-top: 5%;
-  margin-right: 5%;
   padding:5px;
-  /*overflow-y: scroll;*/
+  margin-top: 5%;
+  float: right;
   height: 600px;
 }
-
+}
 .grid-element {
   width: 150px;
   height: 150px;
@@ -52,13 +76,8 @@ html {
 .grid-element:hover{
   border-color:#0B81C8;
 }
-#addBtn{
-    text-align: center;
-}
-#addBtn button{
-  background-color: #0B81C8;
 
-}
+
 
 #APPLE {
   background-size: cover;
