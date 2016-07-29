@@ -1,86 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous" />
     <title>Portfolio</title>
   </head>
-
-  <body >
-      <header>
-          <h1 id = "header">Portfolio</h1>
-      </header>
-
-        <div class="main">
-          <div class = "mainBox">
-            <div class = "mainInfo">
-              <h5 id="headSymbol">Stock Symbol</h3>
-              <p id="headName">Stock Name</p>
-            </div>
-
-            <div class ="mainDetail" >
-              <table class="table table-hover">
-               <tr>
-                 <td>Name:</td>
-                 <td id="CompanyNameCell">{{name}}</td>
-               </tr>
-                <tr>
-                 <td>Symbol:</td>
-                 <td id="CompanySymbolCell">{{symbol}}</td>
-               </tr>
-                <tr>
-                 <td>Last Price:</td>
-                 <td id="LastPriceCell">{{last price}}</td>
-               </tr>
-               <tr>
-                 <td>Change :</td>
-                 <td id="ChangeCell">{{ change }}</td>
-               </tr>
-               <tr>
-                 <td>Change Percent:</td>
-                 <td id="ChangePercentCell">{{ change percent }}</td>
-               </tr>
-                <tr>
-                 <td>Change YTD:</td>
-                 <td id="ChangeYTDCell">{{ change YTD}}</td>
-               </tr>
-               <tr>
-                <td>Open:</td>
-                <td id="OpenCell">{{ Open }}</td>
-              </tr>
-               <tr>
-                <td>High:</td>
-                <td id="HighCell">{{ change YTD}}</td>
-              </tr>
-             <tr>
-              <td>Low:</td>
-              <td id="LowCell">{{ Low }}</td>
-            </tr>
-             </table>
-
-
-</div>
-</div>
-<div id="grid">
-  <div class="grid-element" id="APPLE" data-ticker="aapl"></div>
-  <div class="grid-element" id="GE" data-ticker="ge"></div>
-  <div class="grid-element" id="TESLA" data-ticker="tsla"></div>
-  <div class="grid-element" id="ATT" data-ticker="t"></div>
-  <div class="grid-element" id="IBM" data-ticker="ibm"></div>
-  <div class="grid-element" id="MICROSOFT" data-ticker="msft"></div>
-  <div class="grid-element" id="EXXON" data-ticker="xom"></div>
-  <div class="grid-element" id="GOPRO" data-ticker="gpro"></div>
-  <div class="grid-element" id="AMAZON" data-ticker="amzn"></div>
-  <div class="grid-element" id="BLIZZARD" data-ticker="atvi"></div>
-  <div class="grid-element" id="CHIPOTLE" data-ticker="cmg"></div>
-  <div class="grid-element" id="FORD" data-ticker="f"></div>
-
-</div>
-</div>
-  </body>
   <body>
-<footer>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
-  <script src="document.js"></script>
-</footer>
+    <header>
+      <h1 id="header">Portfolio</h1>
+    </header>
+    <div class="main">
+      <div class="mainBox">
+        <div class="mainInfo">
+          <h3 id="headSymbol" data-bind="Name">Stock Symbol</h3>
+          <h4 id="headName" data-bind="Symbol">Stock Name</h4>
+        </div>
+        <div class="mainDetail">
+          <table id="CompanyDetails" class="table table-hover">
+            <tr>
+              <td>Name:</td>
+              <td id="CompanyNameCell" data-bind="Name">{{data.Name}}</td>
+            </tr>
+            <tr>
+              <td>Symbol:</td>
+              <td id="CompanySymbolCell" data-bind="Symbol">{{data.Symbol}}</td>
+            </tr>
+            <tr>
+              <td>Last Price:</td>
+              <td id="LastPriceCell" data-bind="LastPrice">{{data.LasPrice}}</td>
+            </tr>
+            <tr>
+              <td>Change :</td>
+              <td id="ChangeCell" data-bind="Change">{{data.Change}}</td>
+            </tr>
+            <tr>
+              <td>Change Percent:</td>
+              <td id="ChangePercentCell" data-bind="ChangePercent">{{data.ChangePercent}}</td>
+            </tr>
+            <tr>
+              <td>Change YTD:</td>
+              <td id="ChangeYTDCell" data-bind="ChangePercentYTD">{{data.ChangeYTD}}</td>
+            </tr>
+            <tr>
+              <td>Open:</td>
+              <td id="OpenCell" data-bind="Open">{{dat.Open}}</td>
+            </tr>
+            <tr>
+              <td>High:</td>
+              <td id="HighCell" data-bind="High">{{data.changeYTD}}</td>
+            </tr>
+            <tr>
+              <td>Low:</td>
+              <td id="LowCell" data-bind="Low">{{data.Low}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="grid">
+        <div class="grid-element" id="APPLE" data-ticker="aapl"></div>
+        <div class="grid-element" id="GE" data-ticker="ge"></div>
+        <div class="grid-element" id="TESLA" data-ticker="tsla"></div>
+        <div class="grid-element" id="ATT" data-ticker="t"></div>
+        <div class="grid-element" id="IBM" data-ticker="ibm"></div>
+        <div class="grid-element" id="MICROSOFT" data-ticker="msft"></div>
+        <div class="grid-element" id="EXXON" data-ticker="xom"></div>
+        <div class="grid-element" id="GOPRO" data-ticker="gpro"></div>
+        <div class="grid-element" id="AMAZON" data-ticker="amzn"></div>
+        <div class="grid-element" id="BLIZZARD" data-ticker="atvi"></div>
+        <div class="grid-element" id="CHIPOTLE" data-ticker="cmg"></div>
+        <div class="grid-element" id="FORD" data-ticker="f"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="document.js"></script>
+  </body>
 </html>
